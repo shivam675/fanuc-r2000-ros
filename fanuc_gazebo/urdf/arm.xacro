@@ -1,0 +1,358 @@
+<?xml version="1.0"?>
+<robot name="fanuc" xmlns:xacro="http://wiki.ros.org/xacro">
+
+
+
+
+
+<link name="base_link">
+        <mass value="20"/>
+        <origin xyz="0.0 0.0 0.0"/>
+        <inertia ixx="0.01042" ixy="0.001177" ixz="-0.0008871" iyy="0.01045" iyz="0.0002226" izz="0.01817"/>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://fanuc_r2000ib_support/meshes/r2000ib210f/visual/base_link.stl"/>
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://fanuc_r2000ib_support/meshes/r2000ib210f/collision/base_link.stl"/>
+        </geometry>
+      </collision>
+    </link>
+    <link name="link_1">
+    <origin xyz="0.0 0.0 0.0"/>
+    <mass value="18"/>
+<inertia ixx="0.01042" ixy="0.001177" ixz="-0.0008871" iyy="0.01045" iyz="0.0002226" izz="0.01817"/>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://fanuc_r2000ib_support/meshes/r2000ib210f/visual/link_1.stl"/>
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://fanuc_r2000ib_support/meshes/r2000ib210f/collision/link_1.stl"/>
+        </geometry>
+      </collision>
+    </link>
+    <link name="link_2">
+    <origin xyz="0.0 0.0 0.0"/>
+    <mass value="10"/>
+<inertia ixx="0.01042" ixy="0.001177" ixz="-0.0008871" iyy="0.01045" iyz="0.0002226" izz="0.01817"/>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://fanuc_r2000ib_support/meshes/r2000ib210f/visual/link_2.stl"/>
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://fanuc_r2000ib_support/meshes/r2000ib210f/collision/link_2.stl"/>
+        </geometry>
+      </collision>
+    </link>
+    <link name="link_3">
+    <origin xyz="0.0 0.0 0.0"/>
+    <mass value="10"/>
+<inertia ixx="0.01042" ixy="0.001177" ixz="-0.0008871" iyy="0.01045" iyz="0.0002226" izz="0.01817"/>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://fanuc_r2000ib_support/meshes/r2000ib210f/visual/link_3.stl"/>
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://fanuc_r2000ib_support/meshes/r2000ib210f/collision/link_3.stl"/>
+        </geometry>
+      </collision>
+    </link>
+    <link name="link_4">
+    <origin xyz="0.0 0.0 0.0"/>
+
+    <mass value="10"/>
+<inertia ixx="0.01042" ixy="0.001177" ixz="-0.0008871" iyy="0.01045" iyz="0.0002226" izz="0.01817"/>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://fanuc_r2000ib_support/meshes/r2000ib210f/visual/link_4.stl"/>
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://fanuc_r2000ib_support/meshes/r2000ib210f/collision/link_4.stl"/>
+        </geometry>
+      </collision>
+    </link>
+    <link name="link_5">
+    <origin xyz="0.0 0.0 0.0"/>
+    <mass value="8"/>
+<inertia ixx="0.01042" ixy="0.001177" ixz="-0.0008871" iyy="0.01045" iyz="0.0002226" izz="0.01817"/>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://fanuc_r2000ib_support/meshes/r2000ib210f/visual/link_5.stl"/>
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://fanuc_r2000ib_support/meshes/r2000ib210f/collision/link_5.stl"/>
+        </geometry>
+      </collision>
+    </link>
+    <link name="link_6">
+    <origin xyz="0.0 0.0 0.0"/>
+    <mass value="2"/>
+<inertia ixx="0.01042" ixy="0.001177" ixz="-0.0008871" iyy="0.01045" iyz="0.0002226" izz="0.01817"/>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://fanuc_r2000ib_support/meshes/r2000ib210f/visual/link_6.stl"/>
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://fanuc_r2000ib_support/meshes/r2000ib210f/collision/link_6.stl"/>
+        </geometry>
+      </collision>
+    </link>
+
+
+
+
+
+
+
+
+
+    <joint name="joint_main" type="revolute">
+      <origin xyz="0 0 0.670" rpy="0 0 0"/>
+      <parent link="base_link"/>
+      <child link="link_1"/>
+      <axis xyz="0 0 1"/>
+      <limit lower="-3.14" upper="3.14" effort="2" velocity="2"/>
+    </joint>
+    <joint name="joint_2" type="revolute">
+      <origin xyz="0.312 0 0" rpy="0 0 0"/>
+      <parent link="link_1"/>
+      <child link="link_2"/>
+      <axis xyz="0 1 0"/>
+      <limit lower="1.04" upper="1.32" effort="2" velocity="2"/>
+    </joint>
+    <joint name="joint_3" type="revolute">
+      <origin xyz="0 0 1.075" rpy="0 0 0"/>
+      <parent link="link_2"/>
+      <child link="link_3"/>
+      <axis xyz="0 -1 0"/>
+      <limit lower="2.303" upper="4.014" effort="2" velocity="2"/>
+    </joint>
+    <joint name="joint_4" type="revolute">
+      <origin xyz="0 0 0.225" rpy="0 0 0"/>
+      <parent link="link_3"/>
+      <child link="link_4"/>
+      <axis xyz="-1 0 0"/>
+      <limit lower="-6.28" upper="6.28" effort="2" velocity="2"/>
+    </joint>
+    <joint name="joint_5" type="revolute">
+      <origin xyz="1.280 0 0" rpy="0 0 0"/>
+      <parent link="link_4"/>
+      <child link="link_5"/>
+      <axis xyz="0 -1 0"/>
+      <limit lower="-2.181" upper="2.181" effort="2" velocity="2"/>
+    </joint>
+    <joint name="joint_6" type="revolute">
+      <origin xyz="0.235 0 0" rpy="0 0 0"/>
+      <parent link="link_5"/>
+      <child link="link_6"/>
+      <axis xyz="-1 0 0"/>
+      <limit lower="-6.28" upper="-6.28" effort="2" velocity="2"/>
+    </joint>
+
+    <!-- ROS-Industrial 'base' frame: base_link to Fanuc World Coordinates transform -->
+    <link name="base" />
+    <joint name="base_link-base" type="fixed">
+      <origin xyz="0 0 0.670" rpy="0 0 0"/>
+      <parent link="base_link"/>
+      <child link="base"/>
+    </joint>
+
+    <!-- ROS-Industrial 'flange' frame: attachment point for EEF models -->
+    <link name="flange" />
+    <joint name="joint_6-flange" type="fixed">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <parent link="link_6" />
+      <child link="flange" />
+    </joint>
+
+    <!-- ROS-Industrial 'tool0' frame: all-zeros tool frame -->
+    <link name="tool0" />
+    <joint name="link_6-tool0" type="fixed">
+      <origin xyz="0 0 0" rpy="3.142 -1.571 0" />
+      <parent link="flange" />
+      <child link="tool0" />
+    </joint>
+
+
+
+<!-- Transmissions  -->
+<transmission name="joint_1_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_main">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="joint_1_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+<!-- Transmissions  -->
+<transmission name="joint_2_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_2">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="joint_2_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+<!-- Transmissions  -->
+<transmission name="joint_3_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_3">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="joint_3_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+<!-- Transmissions  -->
+<transmission name="joint_4_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_4">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="joint_4_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+
+<!-- Transmissions  -->
+<transmission name="joint_5_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_5">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="joint_5_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+<!-- Transmissions  -->
+<transmission name="joint_6_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_6">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="joint_6_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
+
+
+
+
+
+
+<gazebo reference="base_link">
+      <selfCollide>true</selfCollide>
+    </gazebo>
+    <gazebo reference="link_1">
+      <selfCollide>true</selfCollide>
+    </gazebo>
+    <gazebo reference="link_2">
+      <selfCollide>true</selfCollide>
+    </gazebo>
+    <gazebo reference="link_3">
+      <selfCollide>true</selfCollide>
+    </gazebo>
+    <gazebo reference="link_4">
+      <selfCollide>true</selfCollide>
+    </gazebo>
+    <gazebo reference="link_5">
+      <selfCollide>true</selfCollide>
+    </gazebo>
+
+    <gazebo reference="link_6">
+      <selfCollide>true</selfCollide>
+    </gazebo>
+
+
+
+ <!-- Gazebo colors -->
+   <gazebo reference="base_link">
+      <material>Gazebo/Grey</material>
+   </gazebo>
+   <gazebo reference="link_1">
+      <material>Gazebo/</material>
+   </gazebo>
+   <gazebo reference="link_2">
+      <material>Gazebo/Orange</material>
+   </gazebo>
+   <gazebo reference="link_3">
+      <material>Gazebo/</material>
+   </gazebo>
+   <gazebo reference="link_4">
+      <material>Gazebo/Grey</material>
+   </gazebo>
+   <gazebo reference="link_5">
+      <material>Gazebo/Orange</material>
+   </gazebo>
+   <gazebo reference="link_6">
+      <material>Gazebo/Orange</material>
+   </gazebo>
+
+
+
+
+
+<!-- Self collision in Gazebo --> 
+  
+
+<!-- Plugins and publishers -->
+
+<gazebo>
+      <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+         <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+      </plugin>
+   </gazebo>
+
+
+
+
+
+
+
+
+
+
+
+</robot>

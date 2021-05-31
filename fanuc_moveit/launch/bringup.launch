@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+
+<launch>
+
+
+<include file="$(find fanuc_moveit)/launch/planning_context.launch" >
+    <arg name="load_robot_description" value="true" />
+</include>
+  
+<node name="joint_state_publisher_moveit" pkg="joint_state_publisher" type="joint_state_publisher">
+    <param name="/use_gui" value="false"/>
+    <rosparam param="/source_list">[/joint_states]</rosparam>
+</node>
+  
+<include file="$(find fanuc_moveit)/launch/move_group.launch">
+    <arg name="publish_monitored_planning_scene" value="true" />
+ </include>
+  
+
+<arg name="scene_file" default="$(find fanuc_moveit)/scene/bottom_cylinder.scene"/>
+<node name="moveit_publish_scene_from_text" pkg="moveit_ros_planning" type="moveit_publish_scene_from_text" args="$(arg scene_file)" />
+
+<!-- <param name="octomap_frame" type="string" value="odom_combined" />
+<param name="octomap_resolution" type="double" value="0.05" />
+<param name="max_range" type="double" value="5.0" /> -->
+
+
+
+
+<arg name="rvizconfig" default="$(find fanuc_moveit)/rviz/default.rviz" />
+<node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
+
+
+
+</launch>

@@ -1,0 +1,36 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/ros/Ingenious/tsuki-no-me/devel/include/**",
+        "/opt/ros/melodic/include/**",
+        "/home/ros/Ingenious/tsuki-no-me/src/akatsuki_description/include/**",
+        "/home/ros/Ingenious/tsuki-no-me/src/amaterasu/include/**",
+        "/home/ros/arm_ws/src/arm_description/include/**",
+        "/home/ros/arm_ws/src/arm_gazebo/include/**",
+        "/home/ros/arm_ws/src/arm_scripts/include/**",
+        "/home/ros/edi_ws/src/fanuc_gazebo/include/**",
+        "/home/ros/edi_ws/src/fanuc_main/include/**",
+        "/home/ros/Ingenious/tsuki-no-me/src/3rd_party/find-object/include/**",
+        "/home/ros/Ingenious/tsuki-no-me/src/3rd_party/gazebo-pkgs/gazebo_grasp_plugin/include/**",
+        "/home/ros/Ingenious/tsuki-no-me/src/3rd_party/gazebo_ros_link_attacher/include/**",
+        "/home/ros/Ingenious/tsuki-no-me/src/3rd_party/gazebo-pkgs/gazebo_state_plugins/include/**",
+        "/home/ros/Ingenious/tsuki-no-me/src/3rd_party/gazebo-pkgs/gazebo_test_tools/include/**",
+        "/home/ros/Ingenious/tsuki-no-me/src/3rd_party/gazebo-pkgs/gazebo_version_helpers/include/**",
+        "/home/ros/Ingenious/tsuki-no-me/src/3rd_party/gazebo-pkgs/gazebo_world_plugin_loader/include/**",
+        "/home/ros/Ingenious/tsuki-no-me/src/obito_gazebo/include/**",
+        "/home/ros/Ingenious/tsuki-no-me/src/3rd_party/general-message-pkgs/object_msgs_tools/include/**",
+        "/home/ros/Ingenious/tsuki-no-me/src/project_tsukinome/include/**",
+        "/home/ros/Ingenious/tsuki-no-me/src/3rd_party/robotiq_85_gripper-master/robotiq_85_simulation/roboticsgroup_gazebo_plugins/include/**",
+        "/home/ros/arm_ws/src/plugins/velodyne_simulator/velodyne_gazebo_plugins/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ],
+  "version": 4
+}
