@@ -10,7 +10,7 @@
 <joint name="world_joint" type="fixed">
     <parent link="world" />
     <child link = "base_link" />
-    <origin xyz="0 0 0.3" rpy="0.0 0.0 0" />
+    <origin xyz="0 0 0" rpy="0.0 0.0 0" />
 </joint>
 
 <link name="base_link">
@@ -291,6 +291,19 @@
 
 
 
+<!-- Force Torque sensor -->
+
+
+<gazebo reference="joint_6">
+      <provideFeedback>true</provideFeedback>
+  </gazebo>
+  <gazebo>
+      <plugin name="ft_sensor" filename="libgazebo_ros_ft_sensor.so">
+          <updateRate>50.0</updateRate>
+          <topicName>fanuc/forcetorque</topicName>
+          <jointName>joint_6</jointName>
+      </plugin>
+  </gazebo>
 
 
 
@@ -438,6 +451,7 @@
          <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
       </plugin>
    </gazebo>
+
 
 
 
