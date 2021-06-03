@@ -1,0 +1,10 @@
+<launch>
+    <rosparam file="$(find fanuc_gazebo)/config/base_controller.yaml" command="load"/>
+    <node name="base_controller" pkg="controller_manager" type="controller_manager" 
+    args="spawn base_controller" respawn="false"/>
+
+    <!-- <arg robot_description_2="$(find_package fanuc_gazebo)/urdf/rot_base.xacro"> -->
+    <node name="joint_state_controller_base_controller_spawner" pkg="controller_manager" type="controller_manager" args="spawn joint_state_controller" respawn="false"/>
+
+    <!-- <node pkg="robot_state_publisher_base_bot" type="robot_state_publisher" name="robot_state_publisher" respawn="false" /> -->
+</launch>

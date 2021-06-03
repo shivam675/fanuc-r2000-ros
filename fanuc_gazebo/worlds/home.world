@@ -89,16 +89,6 @@
       <real_time>18 488876688</real_time>
       <wall_time>1622537554 135238890</wall_time>
       <iterations>18342</iterations>
-      <model name='aws_robomaker_residential_Rangehood_01'>
-        <pose frame=''>-2.02845 -2.11568 0 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose frame=''>-2.02845 -2.11568 0 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
       <model name='ground_plane'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <scale>1 1 1</scale>
@@ -302,49 +292,6 @@
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
       <pose frame=''>3.85645 0.992362 0 0 -0 0</pose>
-    </model>
-    <model name='aws_robomaker_residential_Rangehood_01'>
-      <link name='link'>
-        <inertial>
-          <mass>1</mass>
-        </inertial>
-        <collision name='collision'>
-          <geometry>
-            <mesh>
-              <uri>model://aws_robomaker_residential_Rangehood_01/meshes/aws_Rangehood_01_collision.DAE</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <geometry>
-            <mesh>
-              <uri>model://aws_robomaker_residential_Rangehood_01/meshes/aws_Rangehood_01_visual.DAE</uri>
-            </mesh>
-          </geometry>
-          <meta>
-            <layer>2</layer>
-          </meta>
-        </visual>
-        <self_collide>0</self_collide>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
-      </link>
-      <static>1</static>
-      <pose frame=''>-1.91373 -2.19115 0 0 -0 0</pose>
     </model>
   </world>
 </sdf>

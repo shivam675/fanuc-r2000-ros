@@ -14,3 +14,12 @@ arm_group_controller:
   stop_trajectory_duration: 0.5
   state_publish_rate:  25
   action_monitor_rate: 10
+
+
+# base_controller:
+#   type: effort_controllers/JointPositionController
+#   joints: main_joint
+#   pid: {p: 10, i: 0.1, d: 1}
+#   # stop_trajectory_duration: 0.5
+#   state_publish_rate:  25
+#   action_monitor_rate: 10

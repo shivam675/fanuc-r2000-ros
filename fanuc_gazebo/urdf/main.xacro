@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<robot name="fanuc"  xmlns:xacro="http://ros.org/wiki/xacro">
+    
+
+    <xacro:include filename="$(find fanuc_gazebo)/urdf/arm_new.xacro"/>
+    <xacro:include filename="$(find fanuc_gazebo)/urdf/rot_base.xacro"/>
+
+
+</robot>

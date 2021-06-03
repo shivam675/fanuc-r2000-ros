@@ -2,7 +2,7 @@
 
 <launch>
 <!--   fanuc -->
-    <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find fanuc_gazebo)/urdf/arm_new.xacro'" />
+    <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find fanuc_gazebo)/urdf/main.xacro'" />
 
   <arg name="world" default="empty"/>
   <arg name="paused" default="false"/>
@@ -33,6 +33,7 @@
 
 		
 <include file="$(find fanuc_moveit)/launch/trajectory_control.launch"/>
+<!-- <include file="$(find fanuc_gazebo)/launch/trajectory_control.launch"/> -->
 
   
 </launch>
