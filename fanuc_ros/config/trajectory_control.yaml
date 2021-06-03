@@ -1,0 +1,25 @@
+joint_state_controller:
+  type: joint_state_controller/JointStateController
+  publish_rate: 50
+
+arm_group_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - joint_1
+    - joint_2
+    - joint_3
+    - joint_4
+    - joint_5
+    - joint_6
+  stop_trajectory_duration: 0.5
+  state_publish_rate:  25
+  action_monitor_rate: 10
+
+
+# base_controller:
+#   type: effort_controllers/JointPositionController
+#   joints: main_joint
+#   pid: {p: 10, i: 0.1, d: 1}
+#   # stop_trajectory_duration: 0.5
+#   state_publish_rate:  25
+#   action_monitor_rate: 10

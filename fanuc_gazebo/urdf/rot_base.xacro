@@ -8,7 +8,7 @@
 <joint name="world_joint_2" type="fixed">
     <parent link="world" />
     <child link = "base_blob" />
-    <origin xyz="2.0 0 0" rpy="0.0 0.0 0" />
+    <origin xyz="2.20 0" rpy="0.0 0.0 0" />
 </joint>
 
     
@@ -27,7 +27,7 @@
       </inertial>
       <visual>
         <geometry>
-          <mesh filename="package://fanuc_gazebo/mesh/base_table.stl" scale="1 1 1"/>
+          <mesh filename="package://fanuc_gazebo/mesh/base_table.stl" scale="1 1 0.6"/>
         </geometry>
         <material name="RED">
           <color rgba="1.0 0.0 0.0 1.0"/>
@@ -35,7 +35,7 @@
       </visual>
       <collision>
         <geometry>
-          <mesh filename="package://fanuc_gazebo/mesh/base_table.stl" scale="1 1 1" />
+          <mesh filename="package://fanuc_gazebo/mesh/base_table.stl" scale="1 1 0.6" />
         </geometry>
       </collision>
 </link>
@@ -63,7 +63,7 @@
       </inertial>
       <visual>
         <geometry>
-          <mesh filename="package://fanuc_gazebo/mesh/rot_block.stl" scale="1 1 1"/>
+          <mesh filename="package://fanuc_gazebo/mesh/rot_block.stl" scale="1 1 0.6"/>
         </geometry>
         <material name="RED">
           <color rgba="1.0 0.0 0.0 1.0"/>
@@ -71,7 +71,7 @@
       </visual>
       <collision>
         <geometry>
-          <mesh filename="package://fanuc_gazebo/mesh/rot_block.stl" scale="1 1 1" />
+          <mesh filename="package://fanuc_gazebo/mesh/rot_block.stl" scale="1 1 0.6" />
         </geometry>
       </collision>
 </link>

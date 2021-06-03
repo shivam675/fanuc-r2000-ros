@@ -2,7 +2,7 @@
 
 <launch>
 <!--   fanuc -->
-    <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find fanuc_gazebo)/urdf/main.xacro'" />
+    <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find fanuc_gazebo)/urdf/arm_new.xacro'" />
 
   <arg name="world" default="empty"/>
   <arg name="paused" default="false"/>
