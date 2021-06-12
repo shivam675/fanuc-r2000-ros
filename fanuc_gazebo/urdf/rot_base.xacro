@@ -80,6 +80,45 @@
 
 
 
+<joint name="sliding_joint" type="prismatic">
+      <parent link="base_blob" />
+      <child link = "interferometer" />
+      <origin xyz="0 0 0" rpy="0.0 0.0 0.0" />
+      <axis xyz="0 0 1" />
+      <limit lower="0" upper="3.142" effort="150.0" velocity="1.5"/>
+</joint>
+
+
+
+<link name="interferometer">
+      <inertial>
+        <mass value="50"/>
+        <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+        <inertia
+          ixx="0.01042" ixy="0.001177" ixz="-0.0008871"
+          iyy="0.01045" iyz="0.0002226"
+          izz="0.01817"/>
+      </inertial>
+      <visual>
+        <geometry>
+          <mesh filename="package://fanuc_gazebo/mesh/vertical_interferometer_hbridge.stl" scale="1 1 0.6"/>
+        </geometry>
+        <material name="RED">
+          <color rgba="1.0 0.0 0.0 1.0"/>
+        </material>
+      </visual>
+      <collision>
+        <geometry>
+          <mesh filename="package://fanuc_gazebo/mesh/vertical_interferometer_hbridge.stl" scale="1 1 0.6" />
+        </geometry>
+      </collision>
+</link>
+
+
+
+
+
+
 <!-- <transmission name="main_joint_tran">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="main_joint">

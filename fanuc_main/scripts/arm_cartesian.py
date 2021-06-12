@@ -52,6 +52,22 @@ class aRmMoveit:
 
         self._group.execute(plan, wait=True)
 
+
+    def go_to_defined_pose(self, Plan_group, arg_pose_name):
+        '''prefined pose combined with plan_group to minimise error '''
+        self._planning_group = Plan_group
+        self._group = moveit_commander.MoveGroupCommander(self._planning_group)
+        self._group.set_named_target(arg_pose_name)
+        rospy.sleep(1)
+        # plan_success, plan, planning_time, error_code = self._group.plan() 
+        plan = self._group.plan()
+        goal = moveit_msgs.msg.ExecuteTrajectoryGoal()
+        goal.trajectory = plan
+        self._exectute_trajectory_client.send_goal(goal)
+        rospy.sleep(1)
+        self._exectute_trajectory_client.wait_for_result()
+
+        
     # Destructor
     def __del__(self):
         moveit_commander.roscpp_shutdown()
