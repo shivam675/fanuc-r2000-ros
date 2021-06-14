@@ -24,6 +24,7 @@ class aRmMoveit:
         self._robot = moveit_commander.RobotCommander()
         self._scene = moveit_commander.PlanningSceneInterface()
         self._group = moveit_commander.MoveGroupCommander(self._planning_group)
+        self._group.set_max_velocity_scaling_factor(1)
         self._display_trajectory_publisher = rospy.Publisher('/move_group/display_planned_path', moveit_msgs.msg.DisplayTrajectory, queue_size=1)
 
         self._exectute_trajectory_client = actionlib.SimpleActionClient('execute_trajectory', moveit_msgs.msg.ExecuteTrajectoryAction)
@@ -159,7 +160,7 @@ def main():
     
     l = int((y2-y3)*100)
     b = int((x1-x2)*100)
-    stride = 3
+    stride = 10
     for i in range(1,l+1,stride):
         middle_waypoints_one = geometry_msgs.msg.Pose()
         middle_waypoints_one.position.x = x1
@@ -183,7 +184,7 @@ def main():
     
     target_poses = []
 
-    while not rospy.is_shutdown():
+    # while not rospy.is_shutdown():
         # target_poses.append(copy.deepcopy(waypoints[3]))
         # target_poses.append(copy.deepcopy(waypoints[4]))
         # target_poses.append(copy.deepcopy(waypoints[5]))
@@ -191,9 +192,15 @@ def main():
         # aRm.go_to_pose(target_poses)
         # target_poses = []
 
-        print(waypoints[0:4])
-        print(len(waypoints))
-        aRm.go_to_pose(waypoints) 
+    print(waypoints[0:4])
+    print(len(waypoints))
+    aRm.go_to_pose(waypoints)
+    aRm.go_to_defined_pose("arm_group", "close_pose")
+    aRm.go_to_defined_pose("inter_group", "inter_pose")
+    rospy.sleep(3)
+    aRm.go_to_defined_pose("inter_group", "inter_pose_2")
+    print(waypoints)
+    # aRm.go_to_pose(waypoints)
 
     del aRm   
 

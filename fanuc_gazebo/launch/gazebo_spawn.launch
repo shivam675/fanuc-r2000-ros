@@ -2,7 +2,7 @@
 
 <launch>
 <!--   fanuc -->
-    <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find fanuc_gazebo)/urdf/arm_new.xacro'" />
+    <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find fanuc_gazebo)/urdf/inter.xacro'" />
 
   <arg name="world" default="empty"/>
   <arg name="paused" default="false"/>
@@ -32,7 +32,7 @@
 	    args="-urdf -param robot_description -model fanuc -x $(arg x) -y $(arg y) -z $(arg z) -R $(arg r) -P $(arg p) -Y $(arg ya)" />
 
 		
-<include file="$(find fanuc_inter)/launch/trajectory_control.launch"/>
+<include file="$(find fanuc_final)/launch/trajectory_control.launch"/>
 <!-- <include file="$(find fanuc_gazebo)/launch/trajectory_control.launch"/> -->
 
   

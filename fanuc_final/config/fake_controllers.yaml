@@ -11,9 +11,10 @@ controller_list:
   - name: fake_inter_group_controller
     type: $(arg execution_type)
     joints:
-      - main_inter_joint
+      - inter_joint_1
+      - inter_joint_2
 initial:  # Define initial robot poses.
   - group: arm_group
-    pose: home
+    pose: close_pose
   - group: inter_group
     pose: inter_pose
